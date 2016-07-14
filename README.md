@@ -13,7 +13,7 @@ This playbook use zabbix_host, zabbix_group, and zabbix_screen(Extra Module).
 
 Role Variables
 --------------
-see defaults
+see [defaults](https://github.com/connvoi/add_hosts_to_zabbix/blob/master/defaults/main.yml)
 
 
 Example Playbook
@@ -51,7 +51,7 @@ Example Playbook
        - CPU utilization
        - CPU load
        - Memory Free
-     create_screen: false
+     create_screen: true
   roles:
     - add_hosts_to_zabbix   
 ```

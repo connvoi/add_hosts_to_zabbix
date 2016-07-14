@@ -44,7 +44,7 @@ Example Playbook
          main: 1
          useip: 1
          dns: ""
-         port: "4270"
+         port: "8686"
      login_user: Admin
      login_password: zabbix
      graph_names:

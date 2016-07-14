@@ -1,0 +1,6 @@
+---
+- name: add host to zabbix
+  include: create_interface.yml
+  with_items: "{{ zabbix_hosts }}" 
+  loop_control:
+      loop_var: outer_item

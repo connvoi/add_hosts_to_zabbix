@@ -1,0 +1,32 @@
+---
+# defaults file for add_hosts_to_zabbix
+zabbix_url: http://yourzabbixservername/zabbix
+zabbix_hosts:
+    - ip: hostipA
+      hostname: hostnameA
+      screen_name: screen_nameA
+    - ip: hostipB
+      hostname: hostnameB
+      screen_name: screen_nameB
+zabbix_templates:
+    - TemplateA
+    - TemplateB
+    - TemplateC
+interfaces: 
+    - type: 1
+      main: 1
+      useip: 1
+      dns: ""
+      port: "10050"
+    - type: 4 
+      main: 1
+      useip: 1
+      dns: ""
+      port: "yourJMXPORT"
+login_user: yourzabbixuser
+login_password: yourzabbixpass
+graph_names:
+    - GraphnameA
+    - GraphnameB
+    - GraphnameC
+create_screen: false

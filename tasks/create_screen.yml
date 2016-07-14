@@ -1,0 +1,15 @@
+- name: create base screen
+  local_action:
+      module: zabbix_screen
+      server_url: "{{ zabbix_url }}"
+      login_user: "{{ login_user }}"
+      login_password: "{{ login_password }}"
+      screens: 
+        - screen_name: "{{ item.hostname }} {{ item.screen_name }} "
+          host_group: "{{ item.hostname }} group"
+          state: present
+          graph_names: "{{ graph_names }}"
+          graph_width: 500
+          graph_height: 100
+  with_items: "{{ zabbix_hosts }}"
+  when: create_screen

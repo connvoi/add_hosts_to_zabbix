@@ -1,0 +1,5 @@
+---
+# tasks file for add_hosts_to_zabbix
+- include : create_groups.yml
+- include : add_hosts.yml
+- include : create_screen.yml
